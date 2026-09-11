@@ -5,6 +5,17 @@
 
 /* ---------- BASE ---------- */
 
+:root {
+    --background: #F7F5F0;
+    --surface: #FFFFFF;
+    --text: #172033;
+    --muted: #626979;
+    --accent: #B3263E;
+    --accent-light: #F1E3E5;
+    --border: #DDD9D1;
+    --navy-light: #E8EBF0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +28,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f5;
-    color: #171717;
+    background: var(--background);
+    color: var(--text);
     line-height: 1.6;
 }
 
@@ -50,9 +61,9 @@ nav {
 }
 
 .logo {
-    color: #171717;
+    color: var(--accent);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: -1px;
 }
@@ -63,7 +74,7 @@ nav {
 }
 
 .nav-links a {
-    color: #171717;
+    color: var(--text);
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -71,9 +82,8 @@ nav {
 }
 
 .nav-links a:hover {
-    opacity: 0.55;
+    color: var(--accent);
 }
-
 
 /* ---------- HERO ---------- */
 
@@ -99,6 +109,7 @@ nav {
     line-height: 0.98;
     letter-spacing: -4px;
     margin-bottom: 30px;
+    color: var(--text);
 }
 
 .hero-text {
@@ -117,30 +128,26 @@ nav {
 
 /* ---------- BUTTONS ---------- */
 
-.primary-button,
-.secondary-button {
-    display: inline-block;
-    padding: 13px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: 0.2s ease;
-}
-
 .primary-button {
-    background: #171717;
+    background: var(--accent);
     color: white;
+    box-shadow: 0 5px 15px rgba(179, 38, 62, 0.18);
 }
 
 .secondary-button {
-    border: 1px solid #bbb;
-    color: #171717;
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text);
 }
 
-.primary-button:hover,
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(179, 38, 62, 0.25);
+}
+
 .secondary-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: var(--accent);
 }
 
 
@@ -169,12 +176,23 @@ section h2 {
    ========================================================= */
 
 .project-card {
-    padding: 45px 0;
-    border-top: 1px solid #ccc;
+    background: var(--surface);
+    padding: 40px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(23, 32, 51, 0.05);
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(23, 32, 51, 0.10);
+    border-color: #c9c4bb;
 }
 
 .project-card:last-child {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border);
 }
 
 .project-number {
@@ -212,13 +230,13 @@ section h2 {
 }
 
 .skills span {
-    background: #e7e7e3;
+    background: var(--navy-light);
+    color: var(--text);
     padding: 7px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
 }
-
 
 /* ---------- PROJECT LINKS ---------- */
 
@@ -389,13 +407,15 @@ section h2 {
 }
 
 .stat-card {
-    background: #171717;
+    background: var(--text);
     color: white;
     padding: 35px 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(23, 32, 51, 0.12);
 }
 
 .stat-card h3 {
+    color: white;
     font-size: 38px;
     line-height: 1;
     letter-spacing: -1.5px;
@@ -403,10 +423,9 @@ section h2 {
 }
 
 .stat-card p {
-    color: #bbb;
+    color: #CBD0D9;
     font-size: 14px;
 }
-
 
 /* =========================================================
    PROCESS
@@ -564,6 +583,9 @@ section h2 {
     line-height: 1.25;
     letter-spacing: -1px;
     margin-bottom: 35px;
+    color: var(--text);
+    border-left: 5px solid var(--accent);
+    padding-left: 30px;
 }
 
 
