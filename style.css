@@ -1,3 +1,8 @@
+/* =========================================================
+   BEN BEVILL PORTFOLIO
+   ========================================================= */
+
+
 /* ---------- BASE ---------- */
 
 * {
@@ -27,6 +32,10 @@ section {
     padding: 100px 0;
 }
 
+p {
+    line-height: 1.7;
+}
+
 
 /* ---------- NAVIGATION ---------- */
 
@@ -41,6 +50,8 @@ nav {
 }
 
 .logo {
+    color: #171717;
+    text-decoration: none;
     font-size: 20px;
     font-weight: 800;
     letter-spacing: -1px;
@@ -56,6 +67,7 @@ nav {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    transition: 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -78,6 +90,7 @@ nav {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
@@ -101,6 +114,9 @@ nav {
     margin-top: 38px;
 }
 
+
+/* ---------- BUTTONS ---------- */
+
 .primary-button,
 .secondary-button {
     display: inline-block;
@@ -109,6 +125,7 @@ nav {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
+    transition: 0.2s ease;
 }
 
 .primary-button {
@@ -127,10 +144,11 @@ nav {
 }
 
 
-/* ---------- SECTION HEADINGS ---------- */
+/* ---------- GENERAL SECTION HEADINGS ---------- */
 
 section h2 {
     font-size: 42px;
+    line-height: 1.15;
     letter-spacing: -1.5px;
     margin-bottom: 35px;
 }
@@ -146,7 +164,9 @@ section h2 {
 }
 
 
-/* ---------- PROJECTS ---------- */
+/* =========================================================
+   HOMEPAGE PROJECTS
+   ========================================================= */
 
 .project-card {
     padding: 45px 0;
@@ -166,6 +186,7 @@ section h2 {
 
 .project-card h3 {
     font-size: 29px;
+    line-height: 1.25;
     margin-bottom: 4px;
 }
 
@@ -179,6 +200,9 @@ section h2 {
     font-size: 17px;
     color: #444;
 }
+
+
+/* ---------- SKILL TAGS ---------- */
 
 .skills {
     display: flex;
@@ -196,7 +220,29 @@ section h2 {
 }
 
 
-/* ---------- EXPERIENCE ---------- */
+/* ---------- PROJECT LINKS ---------- */
+
+.project-link {
+    display: inline-block;
+    margin-top: 27px;
+    color: #171717;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #171717;
+    padding-bottom: 3px;
+    transition: 0.2s ease;
+}
+
+.project-link:hover {
+    opacity: 0.55;
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
 
 .experience-item {
     border-top: 1px solid #ccc;
@@ -224,7 +270,9 @@ section h2 {
 }
 
 
-/* ---------- CONTACT ---------- */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 #contact {
     max-width: 760px;
@@ -238,6 +286,7 @@ section h2 {
 .contact-links {
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -248,10 +297,279 @@ section h2 {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-2px);
 }
 
 
-/* ---------- FOOTER ---------- */
+/* =========================================================
+   MCCALLIE PROJECT PAGE
+   ========================================================= */
+
+
+/* ---------- PROJECT HERO ---------- */
+
+.project-hero {
+    padding-top: 80px;
+    padding-bottom: 110px;
+    max-width: 950px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    transition: 0.2s ease;
+}
+
+.back-link:hover {
+    color: #171717;
+    transform: translateX(-3px);
+}
+
+.project-hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    letter-spacing: -3.5px;
+    max-width: 950px;
+    margin-bottom: 30px;
+}
+
+.project-intro {
+    max-width: 780px;
+    font-size: 23px;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* ---------- CASE STUDY SECTIONS ---------- */
+
+.case-section {
+    border-top: 1px solid #ccc;
+    max-width: 1000px;
+}
+
+.case-section > p:not(.section-label):not(.large-takeaway) {
+    max-width: 780px;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 22px;
+}
+
+.case-section h2 {
+    max-width: 850px;
+}
+
+.final-section {
+    padding-bottom: 130px;
+}
+
+.final-section .primary-button {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #171717;
+    color: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+}
+
+.stat-card h3 {
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.process-grid {
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 60px 170px 1fr;
+    gap: 25px;
+    align-items: start;
+
+    padding: 28px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.process-step > p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #888;
+}
+
+.process-step h3 {
+    font-size: 20px;
+}
+
+.process-step span {
+    max-width: 600px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DATA TABLE
+   ========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 50px;
+    margin-bottom: 55px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.project-table th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 14px;
+    border-bottom: 2px solid #171717;
+}
+
+.project-table td {
+    padding: 17px 14px;
+    border-bottom: 1px solid #ccc;
+    color: #444;
+    font-size: 15px;
+}
+
+.project-table tbody tr:hover {
+    background: #eeeeea;
+}
+
+
+/* =========================================================
+   VISUALIZATION AREAS
+   ========================================================= */
+
+.visual-placeholder {
+    margin-top: 60px;
+    padding: 60px;
+    background: #ecece8;
+    border-radius: 10px;
+}
+
+.visual-placeholder .section-label {
+    margin-bottom: 14px;
+}
+
+.visual-placeholder h3 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.visual-placeholder > p:last-child {
+    max-width: 600px;
+    color: #666;
+}
+
+
+/* Future styling for real project images */
+
+.project-visual {
+    width: 100%;
+    display: block;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.visual-caption {
+    color: #777;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   COLOR-CODED EXPLANATION
+   ========================================================= */
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 45px;
+}
+
+.legend-item {
+    background: #ecece8;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.legend-item h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.legend-item p {
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   KEY FINDING
+   ========================================================= */
+
+.large-takeaway {
+    max-width: 900px;
+    font-size: clamp(27px, 4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -1px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
     max-width: 1100px;
@@ -263,7 +581,30 @@ footer {
 }
 
 
-/* ---------- MOBILE ---------- */
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        grid-template-columns: 45px 140px 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -276,16 +617,19 @@ footer {
     }
 
     .nav-links {
-        gap: 15px;
+        gap: 14px;
     }
 
     .nav-links a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     section {
         padding: 70px 0;
     }
+
+
+    /* Homepage hero */
 
     .hero {
         min-height: 75vh;
@@ -299,32 +643,84 @@ footer {
         font-size: 19px;
     }
 
-    section h2 {
-        font-size: 34px;
-    }
-
     .hero-buttons {
         flex-direction: column;
         align-items: flex-start;
     }
-}
 
 
-/* ---------- PROJECT LINKS ---------- */
+    /* Headings */
 
-.project-link {
-    display: inline-block;
-    margin-top: 25px;
-    color: #171717;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    border-bottom: 1px solid #171717;
-    padding-bottom: 3px;
-    transition: 0.2s ease;
-}
+    section h2 {
+        font-size: 34px;
+    }
 
-.project-link:hover {
-    opacity: 0.55;
-    transform: translateX(3px);
+
+    /* Project page */
+
+    .project-hero {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .project-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .project-intro {
+        font-size: 19px;
+    }
+
+    .back-link {
+        margin-bottom: 50px;
+    }
+
+    .case-section > p:not(.section-label):not(.large-takeaway) {
+        font-size: 16px;
+    }
+
+
+    /* Stats */
+
+    .stat-card {
+        padding: 28px 24px;
+    }
+
+    .stat-card h3 {
+        font-size: 32px;
+    }
+
+
+    /* Process */
+
+    .process-step {
+        display: block;
+    }
+
+    .process-step > p {
+        margin-bottom: 8px;
+    }
+
+    .process-step h3 {
+        margin-bottom: 8px;
+    }
+
+
+    /* Visualizations */
+
+    .visual-placeholder {
+        padding: 35px 25px;
+    }
+
+    .visual-placeholder h3 {
+        font-size: 23px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 30px 22px;
+    }
+
 }
