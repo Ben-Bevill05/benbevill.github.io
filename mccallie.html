@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jump Performance & Force Analysis | Ben Bevill</title>
+
+    <meta
+        name="description"
+        content="McCallie School Jump Performance and Relative Propulsive Force Analysis by Ben Bevill."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo">BB</a>
+
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT HERO -->
+
+        <section class="project-hero">
+
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <p class="eyebrow">
+                MCCALLIE SCHOOL STRENGTH & CONDITIONING · SUMMER 2026
+            </p>
+
+            <h1>
+                Jump Performance & Force Analysis
+            </h1>
+
+            <p class="project-intro">
+                Turning years of athlete performance data into
+                statistical benchmarks coaches can use to better
+                understand jump performance and force production.
+            </p>
+
+            <div class="skills">
+                <span>R</span>
+                <span>Statistical Analysis</span>
+                <span>Regression</span>
+                <span>Data Cleaning</span>
+                <span>Data Visualization</span>
+                <span>Performance Analytics</span>
+            </div>
+
+        </section>
+
+
+
+        <!-- THE PROBLEM -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                01 · THE PROBLEM
+            </p>
+
+            <h2>
+                Turning testing data into something coaches could use.
+            </h2>
+
+            <p>
+                McCallie School had several years of countermovement
+                jump testing data. The goal of my project was to analyze
+                this information and better understand the relationship
+                between jump height and relative propulsive force.
+            </p>
+
+            <p>
+                Instead of simply summarizing the data, I wanted to
+                develop benchmarks that could help coaches understand
+                whether an athlete was producing a typical amount of
+                force for the height they were jumping.
+            </p>
+
+        </section>
+
+
+
+        <!-- THE DATA -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                02 · THE DATA
+            </p>
+
+            <h2>
+                Countermovement jump data from 2023–2026.
+            </h2>
+
+            <p>
+                I analyzed McCallie's countermovement jump data collected
+                between 2023 and 2026. The primary variables used in the
+                analysis were jump height and average relative propulsive
+                force as a percentage of bodyweight.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>2023–2026</h3>
+                    <p>Years of jump data</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>5</h3>
+                    <p>Jump-height groups</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>R</h3>
+                    <p>Primary analysis tool</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ANALYTICAL APPROACH -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                03 · MY APPROACH
+            </p>
+
+            <h2>
+                From raw data to performance benchmarks.
+            </h2>
+
+            <div class="process-grid">
+
+                <div class="process-step">
+
+                    <p>01</p>
+
+                    <h3>Prepare</h3>
+
+                    <span>
+                        Organized and prepared several years of
+                        countermovement jump data for analysis.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>02</p>
+
+                    <h3>Group</h3>
+
+                    <span>
+                        Divided jump performances into five jump-height
+                        ranges from 5–9 inches through 25–30 inches.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>03</p>
+
+                    <h3>Benchmark</h3>
+
+                    <span>
+                        Calculated average force, median force,
+                        quartiles, and standard deviation for each
+                        jump-height group.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>04</p>
+
+                    <h3>Model</h3>
+
+                    <span>
+                        Used linear regression and correlation to
+                        analyze the relationship between relative
+                        propulsive force and jump height.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>05</p>
+
+                    <h3>Visualize</h3>
+
+                    <span>
+                        Converted the statistical results into
+                        visualizations that coaches could quickly
+                        understand and apply.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NORMATIVE ANALYSIS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                04 · NORMATIVE ANALYSIS
+            </p>
+
+            <h2>
+                What is normal for each jump height?
+            </h2>
+
+            <p>
+                I grouped athletes based on jump height and calculated
+                normative relative-force ranges for each group. The
+                25th and 75th percentiles were used to define the
+                typical range of force production.
+            </p>
+
+            <p>
+                This created a baseline that allows an athlete's force
+                production to be compared with other jumps in the same
+                performance range.
+            </p>
+
+
+            <!-- NORMATIVE TABLE -->
+
+            <div class="table-wrapper">
+
+                <table class="project-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Jump Height</th>
+                            <th>Jumps</th>
+                            <th>Average Force</th>
+                            <th>Median Force</th>
+                            <th>25th %ile</th>
+                            <th>75th %ile</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>5–9 in</td>
+                            <td>116</td>
+                            <td>179.9%</td>
+                            <td>179.9%</td>
+                            <td>172.7%</td>
+                            <td>186.2%</td>
+                        </tr>
+
+                        <tr>
+                            <td>10–14 in</td>
+                            <td>1,803</td>
+                            <td>207.4%</td>
+                            <td>207.2%</td>
+                            <td>195.3%</td>
+                            <td>218.9%</td>
+                        </tr>
+
+                        <tr>
+                            <td>15–19 in</td>
+                            <td>3,659</td>
+                            <td>229.3%</td>
+                            <td>228.7%</td>
+                            <td>218.2%</td>
+                            <td>240.3%</td>
+                        </tr>
+
+                        <tr>
+                            <td>20–24 in</td>
+                            <td>666</td>
+                            <td>246.3%</td>
+                            <td>242.5%</td>
+                            <td>231.2%</td>
+                            <td>259.9%</td>
+                        </tr>
+
+                        <tr>
+                            <td>25–30 in</td>
+                            <td>34</td>
+                            <td>247.5%</td>
+                            <td>244.2%</td>
+                            <td>238.8%</td>
+                            <td>257.5%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- CHART PLACEHOLDER -->
+
+            <div class="visual-placeholder">
+
+                <p class="section-label">
+                    NORMATIVE FORCE VISUALIZATION
+                </p>
+
+                <h3>
+                    McCallie Relative Propulsive Force Norms
+                </h3>
+
+                <p>
+                    The color-coded chart from my final analysis
+                    will be displayed here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- VISUALIZATION EXPLANATION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                05 · MAKING THE DATA USEFUL
+            </p>
+
+            <h2>
+                A simple visual for athlete evaluation.
+            </h2>
+
+            <p>
+                I converted the normative ranges into a color-coded
+                chart designed to make the results easier for coaches
+                to interpret.
+            </p>
+
+            <div class="legend-grid">
+
+                <div class="legend-item">
+                    <h3>Below Expected</h3>
+                    <p>
+                        Force production falls below the typical range
+                        for that jump height.
+                    </p>
+                </div>
+
+                <div class="legend-item">
+                    <h3>Normal Range</h3>
+                    <p>
+                        Force production falls between the 25th and
+                        75th percentile for that jump-height group.
+                    </p>
+                </div>
+
+                <div class="legend-item">
+                    <h3>Above Expected</h3>
+                    <p>
+                        Force production exceeds the typical range
+                        for that jump height.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- REGRESSION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                06 · RELATIONSHIP ANALYSIS
+            </p>
+
+            <h2>
+                Does producing more relative force lead to higher jumps?
+            </h2>
+
+            <p>
+                I used correlation and linear regression to analyze
+                the overall relationship between average relative
+                propulsive force and jump height.
+            </p>
+
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>0.689</h3>
+                    <p>Correlation (r)</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>0.475</h3>
+                    <p>R²</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>&lt; 2.2e-16</h3>
+                    <p>Regression p-value</p>
+                </div>
+
+            </div>
+
+
+            <p>
+                The analysis showed a positive relationship between
+                relative propulsive force and jump height. Athletes
+                producing more force relative to their bodyweight
+                generally jumped higher.
+            </p>
+
+            <p>
+                The model produced an R² of approximately 0.475,
+                meaning relative propulsive force explained about
+                47.5% of the variation in jump height within the data.
+            </p>
+
+
+            <!-- SCATTERPLOT PLACEHOLDER -->
+
+            <div class="visual-placeholder">
+
+                <p class="section-label">
+                    REGRESSION VISUALIZATION
+                </p>
+
+                <h3>
+                    Relative Force vs. Jump Height
+                </h3>
+
+                <p>
+                    The scatterplot and regression line from my
+                    final analysis will be displayed here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- KEY FINDING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                07 · KEY FINDING
+            </p>
+
+            <h2>
+                Force matters, but it doesn't explain everything.
+            </h2>
+
+            <p class="large-takeaway">
+                Relative propulsive force had a clear positive
+                relationship with jump height, but it explained
+                only part of the variation in overall jump performance.
+            </p>
+
+            <p>
+                This was important because it showed that relative
+                force is useful for evaluating performance while also
+                demonstrating that other factors contribute to how
+                high an athlete ultimately jumps.
+            </p>
+
+        </section>
+
+
+
+        <!-- IMPACT -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                08 · IMPACT
+            </p>
+
+            <h2>
+                Turning analysis into a coaching tool.
+            </h2>
+
+            <p>
+                The final result was more than a statistical report.
+                I developed benchmarks and visualizations that made it
+                easier to compare an individual athlete's force
+                production with the broader McCallie population.
+            </p>
+
+            <p>
+                The analysis gave the strength and conditioning staff
+                a clearer way to interpret jump-testing results and
+                use the data when evaluating athlete performance.
+            </p>
+
+        </section>
+
+
+
+        <!-- TAKEAWAY -->
+
+        <section class="case-section final-section">
+
+            <p class="section-label">
+                09 · WHAT I LEARNED
+            </p>
+
+            <h2>
+                Analysis has to be understandable to be useful.
+            </h2>
+
+            <p>
+                This project gave me experience taking a real-world
+                dataset from analysis through final communication.
+                I strengthened my skills in R, statistical analysis,
+                regression, data visualization, and translating
+                technical results for a nontechnical audience.
+            </p>
+
+            <p>
+                Most importantly, I learned that finding a statistical
+                result is only part of the process. The result becomes
+                valuable when it can be clearly communicated and used
+                to support better decisions.
+            </p>
+
+
+            <a
+                href="index.html#projects"
+                class="primary-button"
+            >
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Ben Bevill
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
