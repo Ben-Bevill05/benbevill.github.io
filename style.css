@@ -1,0 +1,310 @@
+/* ---------- BASE ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #171717;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    opacity: 0.55;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 8vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    max-width: 650px;
+    font-size: 24px;
+    line-height: 1.45;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.primary-button {
+    background: #171717;
+    color: white;
+}
+
+.secondary-button {
+    border: 1px solid #bbb;
+    color: #171717;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
+
+section h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin-bottom: 35px;
+}
+
+#about {
+    max-width: 760px;
+}
+
+#about > p:not(.section-label) {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.project-card {
+    padding: 45px 0;
+    border-top: 1px solid #ccc;
+}
+
+.project-card:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.project-number {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #777;
+}
+
+.project-card h3 {
+    font-size: 29px;
+    margin-bottom: 4px;
+}
+
+.project-company {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-card > p:not(.project-number):not(.project-company) {
+    max-width: 760px;
+    font-size: 17px;
+    color: #444;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 25px;
+}
+
+.skills span {
+    background: #e7e7e3;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ---------- EXPERIENCE ---------- */
+
+.experience-item {
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+}
+
+.experience-item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.experience-item h3 {
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+.experience-item p:nth-child(2) {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.experience-item p:last-child {
+    max-width: 700px;
+    color: #444;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+#contact {
+    max-width: 760px;
+}
+
+#contact > p:not(.section-label) {
+    font-size: 19px;
+    color: #444;
+}
+
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.contact-links a {
+    background: #171717;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    border-top: 1px solid #ccc;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 0 22px;
+    }
+
+    nav {
+        padding: 22px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 19px;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
