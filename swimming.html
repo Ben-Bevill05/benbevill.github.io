@@ -1,1 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NCAA Swimming Performance Analysis | Ben Bevill</title>
+
+    <meta
+        name="description"
+        content="2025 NCAA Division III Men's Swimming Championship Performance Analysis by Ben Bevill."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo">BB</a>
+
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT HERO -->
+
+        <section class="project-hero">
+
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <p class="eyebrow">
+                INDEPENDENT DATA ANALYTICS PROJECT · 2026
+            </p>
+
+            <h1>
+                NCAA Division III Swimming Championship Performance Analysis
+            </h1>
+
+            <p class="project-intro">
+                Analyzing how pre-meet seed rankings relate to championship
+                performance and using classification modeling to estimate
+                the probability of scoring at the NCAA Championships.
+            </p>
+
+            <div class="skills">
+                <span>R</span>
+                <span>Data Cleaning</span>
+                <span>Statistical Analysis</span>
+                <span>Logistic Regression</span>
+                <span>Classification</span>
+                <span>ROC/AUC</span>
+                <span>Data Visualization</span>
+            </div>
+
+        </section>
+
+
+        <!-- THE QUESTION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                01 · THE QUESTION
+            </p>
+
+            <h2>
+                How well does seed position predict NCAA championship performance?
+            </h2>
+
+            <p>
+                Before the NCAA Championships, swimmers are ranked using
+                their qualifying times from throughout the season. These
+                seed rankings provide an expectation for how the meet
+                might unfold, but championship performance can differ
+                significantly from those projections.
+            </p>
+
+            <p>
+                I wanted to determine how accurately seed rankings
+                represented actual championship performance and whether
+                seed position could be used to estimate a swimmer's
+                probability of scoring.
+            </p>
+
+        </section>
+
+
+        <!-- THE DATA -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                02 · THE DATA
+            </p>
+
+            <h2>
+                Every individual men's swimming event from the 2025 championship.
+            </h2>
+
+            <p>
+                I compiled performance data from the 2025 NCAA Division III
+                Men's Swimming Championships. Each observation represents
+                one swimmer competing in one individual event.
+            </p>
+
+            <p>
+                The dataset included seed rankings and seed times along
+                with preliminary and finals results, allowing me to compare
+                pre-meet expectations with championship performance.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>467</h3>
+                    <p>Swimmer-event observations</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>13</h3>
+                    <p>Individual swimming events</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>2025</h3>
+                    <p>NCAA DIII Championship</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY APPROACH -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                03 · MY APPROACH
+            </p>
+
+            <h2>
+                From championship results to a scoring model.
+            </h2>
+
+            <div class="process-grid">
+
+                <div class="process-step">
+
+                    <p>01</p>
+
+                    <h3>Prepare</h3>
+
+                    <span>
+                        Organized seed times, seed rankings, preliminary
+                        results, and finals results into one analysis-ready
+                        dataset.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>02</p>
+
+                    <h3>Engineer</h3>
+
+                    <span>
+                        Created variables measuring time change, rank change,
+                        performance relative to seed, and NCAA scoring outcomes.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>03</p>
+
+                    <h3>Analyze</h3>
+
+                    <span>
+                        Examined championship performance, event-level
+                        differences, seed accuracy, and scoring patterns.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>04</p>
+
+                    <h3>Model</h3>
+
+                    <span>
+                        Built a logistic regression model to estimate
+                        scoring probability using a swimmer's seed rank.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>05</p>
+
+                    <h3>Evaluate</h3>
+
+                    <span>
+                        Evaluated classification performance using accuracy,
+                        precision, recall, specificity, thresholds, ROC,
+                        and AUC.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMPIONSHIP PERFORMANCE -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                04 · CHAMPIONSHIP PERFORMANCE
+            </p>
+
+            <h2>
+                How closely did swimmers perform to their seed?
+            </h2>
+
+            <p>
+                I first examined changes in both swimming time and ranking
+                to understand how athletes performed relative to their
+                pre-meet expectations.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>0.326%</h3>
+                    <p>Average increase from seed time</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>47.5%</h3>
+                    <p>Outperformed seed rank</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>5.51</h3>
+                    <p>Average rank difference</p>
+                </div>
+
+            </div>
+
+            <p>
+                On average, swimmers performed approximately 0.326% slower
+                than their seed times. At the same time, 47.5% of performances
+                finished ahead of their original seed position.
+            </p>
+
+            <p>
+                The average swimmer finished 5.51 places away from their
+                seed, while 64.1% of performances finished within five
+                places and 86.5% finished within ten places.
+            </p>
+
+        </section>
+
+
+        <!-- SEED VS PERFORMANCE -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                05 · SEED VS. PERFORMANCE
+            </p>
+
+            <h2>
+                Seed rank was strongly related to championship performance.
+            </h2>
+
+            <p>
+                Because both seed position and championship performance
+                are rankings, I used Spearman rank correlation to measure
+                the relationship between the two variables.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>0.797</h3>
+                    <p>Spearman correlation</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>64.1%</h3>
+                    <p>Finished within 5 places</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>86.5%</h3>
+                    <p>Finished within 10 places</p>
+                </div>
+
+            </div>
+
+            <p>
+                The analysis produced a Spearman correlation of 0.797,
+                showing a strong positive relationship between seed rank
+                and championship performance rank.
+            </p>
+
+            <p>
+                Higher-seeded swimmers generally performed better, but
+                the spread around the expected finish line shows that
+                meaningful movement still occurred throughout the field.
+            </p>
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/seed_rank_vs_champ_preform.png"
+                    alt="Seed rank versus championship performance"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Relationship between pre-meet seed rank and championship
+                    performance rank. The dashed line represents finishing
+                    exactly at seed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCORING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                06 · WHO ACTUALLY SCORES?
+            </p>
+
+            <h2>
+                Being seeded in the top 16 did not guarantee scoring.
+            </h2>
+
+            <p>
+                NCAA individual events score through 16th place, making
+                the top 16 on the psych sheet a natural projected scoring
+                group. I compared those projections with the swimmers who
+                actually finished in scoring position.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>76.0%</h3>
+                    <p>Top-16 seeds who scored</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>24.0%</h3>
+                    <p>Scoring spots from outside top 16</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>50</h3>
+                    <p>Outside top-16 scorers</p>
+                </div>
+
+            </div>
+
+            <p class="large-takeaway">
+                Nearly one out of every four scoring positions was earned
+                by a swimmer who entered the meet seeded outside the top 16.
+            </p>
+
+            <p>
+                Of the 208 swimmers seeded in projected scoring position,
+                158 ultimately scored. The remaining 50 scoring positions
+                were earned by swimmers who entered the championship
+                outside the top 16.
+            </p>
+
+        </section>
+
+
+        <!-- SCORING BY SEED -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                07 · SCORING PROBABILITY
+            </p>
+
+            <h2>
+                Scoring probability changed dramatically across seed ranges.
+            </h2>
+
+            <p>
+                I grouped swimmers by seed position to examine how the
+                likelihood of scoring changed throughout the psych sheet.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>98.1%</h3>
+                    <p>Seeds 1–4 scored</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>73.1%</h3>
+                    <p>Seeds 9–12 scored</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>40.4%</h3>
+                    <p>Seeds 13–16 scored</p>
+                </div>
+
+            </div>
+
+            <p>
+                The top seeds were extremely likely to score, with 98.1%
+                of swimmers seeded 1–4 and 92.3% of swimmers seeded 5–8
+                finishing in scoring position.
+            </p>
+
+            <p>
+                One of the most interesting results occurred around the
+                scoring cutoff. Seeds 13–16 and seeds 17–20 both scored
+                at exactly a 40.4% rate in the 2025 championship.
+            </p>
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/prob_scoring.png"
+                    alt="Probability of scoring by NCAA seed range"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Percentage of swimmers who scored within each pre-meet
+                    seed range. Scoring probability decreased substantially
+                    as seed rank became lower.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOGISTIC REGRESSION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                08 · PREDICTING SCORING
+            </p>
+
+            <h2>
+                Can seed rank estimate a swimmer's probability of scoring?
+            </h2>
+
+            <p>
+                I built a logistic regression model using seed rank to
+                estimate whether a swimmer would finish in an NCAA
+                scoring position.
+            </p>
+
+            <p>
+                Seed rank was a statistically significant predictor of
+                scoring. Each one-position decrease in seed ranking was
+                associated with approximately a 16.3% decrease in the
+                odds of scoring.
+            </p>
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/predicted_prob_scoring.png"
+                    alt="Predicted probability of scoring by seed rank"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Logistic regression estimates of scoring probability
+                    by seed rank. The model's 50% probability point occurs
+                    around seed 16–17.
+                </p>
+
+            </div>
+
+            <p>
+                The model estimated that the probability of scoring falls
+                below 50% around seed 16–17, closely matching the NCAA's
+                actual 16-place scoring cutoff.
+            </p>
+
+        </section>
+
+
+        <!-- MODEL EVALUATION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                09 · MODEL EVALUATION
+            </p>
+
+            <h2>
+                Evaluating the scoring classifier.
+            </h2>
+
+            <p>
+                I evaluated the logistic regression model using a 50%
+                classification threshold and calculated accuracy,
+                precision, recall, and specificity.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>78.6%</h3>
+                    <p>Accuracy</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>76.0%</h3>
+                    <p>Precision</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>76.0%</h3>
+                    <p>Recall</p>
+                </div>
+
+            </div>
+
+            <p>
+                At the 50% threshold, the model correctly classified
+                approximately 78.6% of swimmer-event observations.
+                Precision and recall were both 76.0%, while specificity
+                was 80.7%.
+            </p>
+
+            <p>
+                I also tested probability thresholds ranging from 0.10
+                through 0.90. Lower thresholds increased recall, while
+                higher thresholds increased precision and specificity.
+                Of the thresholds examined, 0.60 produced the highest
+                overall accuracy at approximately 80.7%.
+            </p>
+
+        </section>
+
+
+        <!-- ROC / AUC -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                10 · ROC & AUC
+            </p>
+
+            <h2>
+                Measuring performance across every classification threshold.
+            </h2>
+
+            <p>
+                Rather than evaluating the classifier at only one probability
+                threshold, I used a receiver operating characteristic curve
+                to examine the tradeoff between sensitivity and specificity
+                across possible thresholds.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>0.887</h3>
+                    <p>Area Under the Curve</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>80.7%</h3>
+                    <p>Specificity at 0.50</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>0.60</h3>
+                    <p>Highest-accuracy tested threshold</p>
+                </div>
+
+            </div>
+
+            <p>
+                The model produced an AUC of 0.887, indicating strong
+                separation between scorers and non-scorers within the
+                observed 2025 championship data.
+            </p>
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/ROC_curve.png"
+                    alt="ROC curve for NCAA scoring model"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    ROC curve for the logistic regression scoring model.
+                    The model produced an AUC of 0.887.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                11 · KEY FINDING
+            </p>
+
+            <h2>
+                Seed rank matters, but the psych sheet doesn't tell the whole story.
+            </h2>
+
+            <p class="large-takeaway">
+                Seed rankings were strongly related to championship
+                performance, but 24% of NCAA scoring positions were
+                still earned by swimmers seeded outside the top 16.
+            </p>
+
+            <p>
+                The analysis showed that pre-meet rankings provide useful
+                information about likely championship outcomes. Top seeds
+                were substantially more likely to score, and seed rank
+                showed a strong relationship with actual performance.
+            </p>
+
+            <p>
+                However, the movement around the scoring cutoff shows why
+                championship results cannot be determined from the psych
+                sheet alone.
+            </p>
+
+        </section>
+
+
+        <!-- LIMITATIONS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                12 · LIMITATIONS
+            </p>
+
+            <h2>
+                Understanding what the model can and cannot tell us.
+            </h2>
+
+            <p>
+                This analysis examines only the 2025 NCAA Division III
+                Men's Swimming Championships. Patterns from one championship
+                may not represent Division III swimming across multiple seasons.
+            </p>
+
+            <p>
+                The logistic regression model was also trained and evaluated
+                using the same 2025 dataset. Therefore, its classification
+                metrics describe performance on the observed data and should
+                not be interpreted as validated predictive performance on
+                future NCAA Championships.
+            </p>
+
+            <p>
+                A future extension of the project could incorporate multiple
+                championship seasons and evaluate the model using completely
+                unseen championship data.
+            </p>
+
+        </section>
+
+
+        <!-- WHAT I LEARNED -->
+
+        <section class="case-section final-section">
+
+            <p class="section-label">
+                13 · WHAT I LEARNED
+            </p>
+
+            <h2>
+                Turning a question I care about into a complete analytics project.
+            </h2>
+
+            <p>
+                This project gave me experience taking an analysis from raw
+                championship data through data preparation, exploratory
+                analysis, statistical testing, predictive modeling, model
+                evaluation, and final communication.
+            </p>
+
+            <p>
+                I strengthened my skills in R, logistic regression,
+                classification, threshold selection, ROC analysis, and data
+                visualization while learning how different analytical methods
+                can work together to answer one larger question.
+            </p>
+
+            <p>
+                Most importantly, the project allowed me to apply data
+                analytics to a sport I understand deeply and turn familiar
+                swimming results into measurable insights about championship
+                performance.
+            </p>
+
+            <a
+                href="index.html#projects"
+                class="primary-button"
+            >
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Ben Bevill
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
