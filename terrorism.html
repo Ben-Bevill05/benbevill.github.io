@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terrorism Dataset Analysis | Ben Bevill</title>
+
+    <meta
+        name="description"
+        content="Statistical analysis of lone offender terrorists and mass murderers by Ben Bevill."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo">BB</a>
+
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- PROJECT HERO -->
+
+        <section class="project-hero">
+
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <p class="eyebrow">
+                DENISON UNIVERSITY · DATA ANALYTICS PROJECT
+            </p>
+
+            <h1>
+                Terrorism Dataset Analysis
+            </h1>
+
+            <p class="project-intro">
+                Exploring characteristics, behaviors, and attack patterns
+                among lone offender terrorists and mass murderers using
+                data wrangling, statistical testing, regression, and
+                data visualization.
+            </p>
+
+            <div class="skills">
+                <span>R</span>
+                <span>Data Wrangling</span>
+                <span>Statistical Analysis</span>
+                <span>T-Tests</span>
+                <span>ANOVA</span>
+                <span>Chi-Square</span>
+                <span>Regression</span>
+                <span>Data Visualization</span>
+            </div>
+
+        </section>
+
+
+        <!-- THE QUESTION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                01 · THE QUESTION
+            </p>
+
+            <h2>
+                What are the main characteristics of lone offender terrorists and mass murderers?
+            </h2>
+
+            <p>
+                The goal of this project was to explore common characteristics,
+                behaviors, experiences, and attack patterns among lone offender
+                terrorists and mass murderers in the United States.
+            </p>
+
+            <p>
+                We examined factors including demographics, education,
+                attack type, military experience, religion, criminal history,
+                and other behavioral characteristics to identify patterns
+                within the data.
+            </p>
+
+        </section>
+
+
+        <!-- THE DATA -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                02 · THE DATA
+            </p>
+
+            <h2>
+                A dataset containing 151 characteristics across 186 offenders.
+            </h2>
+
+            <p>
+                The dataset was obtained from the U.S. Department of Justice
+                through Data.gov and examines behavioral characteristics of
+                lone offender terrorists and mass murderers in the United States.
+            </p>
+
+            <p>
+                The observations cover offenders operating between 1990 and
+                2013 and include developmental, behavioral, ideological, and
+                sociodemographic factors.
+            </p>
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <h3>186</h3>
+                    <p>Offenders</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>151</h3>
+                    <p>Factor variables</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>1990–2013</h3>
+                    <p>Years covered</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATA WRANGLING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                03 · DATA WRANGLING
+            </p>
+
+            <h2>
+                Turning the original dataset into analysis-ready variables.
+            </h2>
+
+            <p>
+                Many variables contained category descriptions alongside
+                numeric codes, while special values were also used to
+                represent unknown observations. The data needed to be
+                transformed before analysis.
+            </p>
+
+            <div class="process-grid">
+
+                <div class="process-step">
+
+                    <p>01</p>
+
+                    <h3>Extract</h3>
+
+                    <span>
+                        Used str_extract() to isolate numeric values from
+                        variables containing both numbers and category labels.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>02</p>
+
+                    <h3>Transform</h3>
+
+                    <span>
+                        Used mutate() to create cleaned numeric variables that
+                        could be used for statistical analysis and visualization.
+                    </span>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p>03</p>
+
+                    <h3>Clean</h3>
+
+                    <span>
+                        Re-coded values of 88 and 99, which represented
+                        unknown observations, as missing values to prevent
+                        them from distorting summaries and visualizations.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPLORATORY ANALYSIS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                04 · EXPLORATORY ANALYSIS
+            </p>
+
+            <h2>
+                Exploring education and attack patterns within the data.
+            </h2>
+
+            <p>
+                Before conducting statistical tests, we used visualizations
+                to explore the distribution of offender characteristics and
+                identify patterns worth investigating further.
+            </p>
+
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/education_level_distribution.png"
+                    alt="Distribution of education levels among offenders"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Distribution of education levels represented in the offender dataset.
+                </p>
+
+            </div>
+
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/Attack types by offender type.png"
+                    alt="Distribution of attack types by offender type"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Comparison of attack types between lone offender terrorists
+                    and mass casualty offenders.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICAL TESTING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                05 · STATISTICAL TESTING
+            </p>
+
+            <h2>
+                Testing whether observed differences were statistically meaningful.
+            </h2>
+
+            <p>
+                We applied multiple statistical methods to investigate
+                relationships between offender characteristics. These included
+                t-tests, ANOVA, and chi-square testing.
+            </p>
+
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/Age of first act.jpg"
+                    alt="Distribution of age at first act"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Distribution of age at first act. The overall mean was
+                    approximately 34.7 years and the median was 34.
+                </p>
+
+            </div>
+
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/t-test.png"
+                    alt="T-test comparing age at first act"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    T-test examining differences in age at first act between
+                    groups in the dataset.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGRESSION -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                06 · REGRESSION ANALYSIS
+            </p>
+
+            <h2>
+                Did military experience relate to the number of people killed?
+            </h2>
+
+            <p>
+                We used bivariate linear regression to examine the relationship
+                between years of military experience and the total number of
+                people killed.
+            </p>
+
+            <p>
+                The analysis did not provide evidence of a statistically
+                significant relationship between the two variables. This was
+                an important result because it demonstrated that not every
+                apparent or expected relationship in the dataset was supported
+                statistically.
+            </p>
+
+
+            <div class="project-visual-container">
+
+                <img
+                    src="images/Military experience vs. total killed regression.png"
+                    alt="Regression between military experience and total number killed"
+                    class="project-visual"
+                >
+
+                <p class="visual-caption">
+                    Bivariate regression examining years of military experience
+                    and total number of people killed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                07 · KEY FINDINGS
+            </p>
+
+            <h2>
+                Statistical testing helped separate patterns from unsupported relationships.
+            </h2>
+
+            <p class="large-takeaway">
+                The analysis revealed several patterns within the offender
+                data while also showing that some characteristics had little
+                statistical relationship with the outcomes we examined.
+            </p>
+
+            <p>
+                The dataset was heavily male dominated, and the observed mean
+                age of first act differed between males and females. Exploratory
+                analysis also showed differences in attack types across offender
+                groups and patterns in educational attainment.
+            </p>
+
+            <p>
+                Other analyses did not produce statistically significant
+                evidence. In particular, the regression did not support a
+                relationship between years of military experience and the
+                total number of people killed.
+            </p>
+
+        </section>
+
+
+        <!-- LIMITATIONS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                08 · LIMITATIONS
+            </p>
+
+            <h2>
+                The results should be interpreted within the limits of the dataset.
+            </h2>
+
+            <p>
+                The dataset contained only 186 offenders and was limited to
+                United States-based cases between 1990 and 2013. Because of
+                this scope, the results should not be treated as representative
+                of all terrorism or mass casualty events.
+            </p>
+
+            <p>
+                The data was also constructed using publicly available
+                information about identifiable offenders, creating potential
+                data quality and ethical limitations. Certain categories of
+                mass violence were not included in the dataset.
+            </p>
+
+            <p>
+                These limitations reinforced the importance of interpreting
+                statistical findings in the context of how the underlying
+                data was collected and defined.
+            </p>
+
+        </section>
+
+
+        <!-- WHAT I LEARNED -->
+
+        <section class="case-section final-section">
+
+            <p class="section-label">
+                09 · WHAT I LEARNED
+            </p>
+
+            <h2>
+                Working through the full statistical analysis process.
+            </h2>
+
+            <p>
+                This project gave me experience taking a large, messy dataset
+                through data wrangling, exploratory analysis, statistical
+                testing, regression, visualization, and final communication.
+            </p>
+
+            <p>
+                I strengthened my skills in R while learning how to select
+                statistical methods based on the question being asked and how
+                to interpret both statistically significant and insignificant
+                results.
+            </p>
+
+            <p>
+                Most importantly, I learned that a useful analysis is not about
+                forcing every test to produce a significant result. Understanding
+                when the data does not support a relationship can be just as
+                important as finding one that it does.
+            </p>
+
+            <a
+                href="index.html#projects"
+                class="primary-button"
+            >
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Ben Bevill
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
